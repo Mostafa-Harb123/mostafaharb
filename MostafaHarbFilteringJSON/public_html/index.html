@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Filtering</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <div class="row">
+            <div style="padding-bottom: 20px;">
+                <h2>Search by:</h2>
+                <label for="numRow">Number of rows needed</label>
+                <input type="number" min ="1" id="numRow"/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="cat">Categories needed</label>
+                <input type="text" id="cat" placeholder="category1,category2, etc..."/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="fname">Categories needed</label>
+                <input type="text" id="fname" placeholder="First Name"/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="lname">Categories needed</label>
+                <input type="text" id="lname" placeholder="Last Name"/>
+
+                <input type="button" value="get JSON" onclick="getArray()"/>
+            </div>
+            <div style="padding-left: 15%;" id="btns">
+                <button onclick="filtering('category1')">Category 1</button>
+                <button onclick="filtering('category2')">Category 2</button>
+                <button onclick="filtering('category3')">Category 3</button>
+                <button onclick="show(json)">Reset</button>
+            </div>
+            <div id="result" style="padding-left: 10%;" >
+
+            </div>
+        </div>
+
+
+        <script src="jsonArray.js"></script>
+
+    </body>
+</html>
